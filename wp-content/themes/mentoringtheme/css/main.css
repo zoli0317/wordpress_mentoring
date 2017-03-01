@@ -1,3 +1,39 @@
 body {
 	background: #f1f1f1;
+	margin: 10px auto;
+	width: 90%;
+}
+.banner {
+	background-image: url(../images/banner.jpg);
+    background-position: 30% 50%;
+	display: block;
+    height: 180px;
+}
+.menus {
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+}
+.menus li {
+	display: inline-block;
+}
+.menus a {
+	color: white;
+	padding: 16px;
+	text-decoration: none;
+}
+.menus a:hover {
+	background-color: #777;
+	padding: 16px;
+}
+.date-content {
+	padding-bottom: 10px;
+	border-bottom: 2px solid grey;
+}
+.date-content:last-child  {
+	border: none;
+}
+.author,
+.date {
+	font-weight: bold;
 }
