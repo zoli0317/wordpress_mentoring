@@ -7,12 +7,12 @@
         <div class="entry-content-page">
             <?php the_content(); ?> 
         </div>
-
     <?php
     endwhile;
     wp_reset_query(); 
     ?>
 </div>
+
 <pre>This is the page.php</pre>
 
 <?php get_footer(); ?>

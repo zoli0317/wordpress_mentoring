@@ -10,7 +10,7 @@
         <div class="main-wrapper">
             <header>
 				<div class="banner-container">
-					<a href="http://local.mentoring.angryportfolio.com/" class="banner"></a>
+					<a href="http://mentoring.angryportfolio.com/" class="banner"></a>
 				</div>
 				<div class="menus">
 					<?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header-menu')); ?>

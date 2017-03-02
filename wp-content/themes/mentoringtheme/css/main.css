@@ -26,6 +26,9 @@ body {
 	background-color: #777;
 	padding: 16px;
 }
+.author-content {
+	margin-top: 10px;
+}
 .date-content {
 	padding-bottom: 10px;
 	border-bottom: 2px solid grey;

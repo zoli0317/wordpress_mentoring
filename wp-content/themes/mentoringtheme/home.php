@@ -11,6 +11,7 @@
     wp_reset_query();
     ?>
 </div>
+
 <pre>This is the home.php</pre>
 
 <?php get_footer(); ?>
