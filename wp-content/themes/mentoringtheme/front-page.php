@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="pageContent">
+<div class="posts">
     <?php 
 	while (have_posts()) : the_post(); ?>
 		<div class="author-content">Author: <span class="author"><?php the_author(); ?></span></div>
