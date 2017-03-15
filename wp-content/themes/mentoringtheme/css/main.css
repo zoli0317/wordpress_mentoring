@@ -9,20 +9,20 @@ body {
 	display: block;
     height: 180px;
 }
-.menus {
+.header-menus {
 	background-color: #333;
 	overflow: auto;
 	white-space: nowrap;
 }
-.menus li {
+.header-menus li {
 	display: inline-block;
 }
-.menus a {
+.header-menus a {
 	color: white;
 	padding: 16px;
 	text-decoration: none;
 }
-.menus a:hover {
+.header-menus a:hover {
 	background-color: #777;
 	padding: 16px;
 }
@@ -55,9 +55,31 @@ body {
     vertical-align: top;
     width: 19%;
 }
-
 .posts {
 	padding: 0 15px;
+}
+.footer-menus {
+	background-color: #f1f1f1;
+}
+.footer-menus ul {
+    padding: 0px;
+    text-align: center;
+}
+.footer-menus li {
+	display: inline-block;
+}
+.footer-menus a {
+    border-radius: 15px;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 16px;
+    text-decoration: none;
+}
+.footer-menus a:hover {
+	background-color: #c1c1c1;
+	padding: 16px;
+	transition: opacity 2.5s, background-color 2.5s;
 }
 @media only screen and (max-width: 900px) {
 	.page-content {

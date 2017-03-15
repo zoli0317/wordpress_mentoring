@@ -10,9 +10,9 @@
         <div class="main-wrapper">
             <header>
 				<div class="banner-container">
-					<a href="http://mentoring.angryportfolio.com/" class="banner"></a>
+					<a href=<?php echo get_bloginfo('wpurl'); ?>  class="banner"></a>
 				</div>
-				<div class="menus">
-					<?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header-menu')); ?>
+				<div class="header-menus">
+					<?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header-menu')); ?>    
 				</div>
             </header>
