@@ -32,19 +32,33 @@ body {
     padding-left: 15px;
     width: 80%;
 }
-.author-content {
+.title-contents {
+    display: inline-block;
+    font-size: 26px;
+	font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.author-contents {
 	margin-top: 10px;
+	margin-left: 160px;
 }
-.date-content {
-	padding-bottom: 10px;
+.date-contents {
+	margin-left: 160px;
+}
+.post-contents {
 	border-bottom: 2px solid grey;
+	padding-bottom: 10px;
 }
-.date-content:last-child  {
+.post-contents:last-child  {
 	border: none;
 }
 .author,
 .date {
 	font-weight: bold;
+}
+.post-content {
+	width: 80%;
 }
 .widget-area{
     box-sizing: border-box;
@@ -57,6 +71,34 @@ body {
 }
 .posts {
 	padding: 0 15px;
+}
+#post-sidebar {
+	padding: 0px;
+}
+#post-sidebar h2 {
+    color: #281c84;
+	margin: 0px;
+}
+#post-sidebar ul {
+	margin: 0px;
+}
+#post-sidebar li {
+	list-style-type: none;
+}
+#post-sidebar li>a {
+    color: #281c84;
+    font-family: cursive;
+    line-height: 35px;
+	margin-left: -20px;
+    text-decoration: none;
+    transition: font-size 2s;
+}
+#post-sidebar li>a:hover {
+	font-size: 20px;
+}
+.thumbnail-image{
+    float: left;
+    margin: 15px 10px 0px 0px;
 }
 .footer-menus {
 	background-color: #f1f1f1;
@@ -81,6 +123,7 @@ body {
 	padding: 16px;
 	transition: opacity 2.5s, background-color 2.5s;
 }
+
 @media only screen and (max-width: 900px) {
 	.page-content {
 		width: 100%;

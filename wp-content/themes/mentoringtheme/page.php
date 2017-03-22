@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div>
-	<?php get_sidebar(); ?>	
+	<?php get_sidebar('page'); ?>	
 	<div id="content" class="page-content">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php
