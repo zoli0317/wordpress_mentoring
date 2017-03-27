@@ -39,6 +39,12 @@ body {
     margin-top: 10px;
     text-decoration: none;
 }
+.large-image {
+	margin-right: 20px;
+    float: left;
+    height: 300px;
+    width: 40%;
+}
 .author-contents {
 	margin-top: 10px;
 	margin-left: 160px;
@@ -96,9 +102,17 @@ body {
 #post-sidebar li>a:hover {
 	font-size: 20px;
 }
+.title-content {
+    font-size: 40px;
+    font-style: italic;
+	text-align: center;
+}
 .thumbnail-image{
     float: left;
     margin: 15px 10px 0px 0px;
+}
+.author-content {
+	clear: both;
 }
 .footer-menus {
 	background-color: #f1f1f1;
