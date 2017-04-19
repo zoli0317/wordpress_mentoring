@@ -99,3 +99,19 @@ function crunchify_social_sharing_buttons($content) {
 	}
 };
 add_filter( 'the_content', 'crunchify_social_sharing_buttons');
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Add page type selector.
+ */
+require get_template_directory() . '/post-meta/page_type_selector.php';
+

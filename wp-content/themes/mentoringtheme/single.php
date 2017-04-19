@@ -9,35 +9,20 @@
         <div class="post-content"><?php the_content(); ?></div>
 		<div class="author-content">Author: <span class="author"><?php the_author(); ?></span></div>
 		<div class="date-content">Created date: <span class="date"><?php the_date(); ?></span></div>
+		<?php get_my_category(); ?>
+		<?php get_my_tag(); ?>
+		
+	    <div class="sharebuttons">
+	    	<a href="http://facebook.com/sharer.php?u=<?php the_permalink(); ?>" title="Facebook share" class="facebookshare" target="_blank" rel="nofollow"></a>
+	    	<a href="http://twitter.com/home?status=Interesting article at <?php the_permalink(); ?>" title="Twitter share" class="twittershare" target="_blank" rel="nofollow"></a>
+	    </div>
 
-		<div class="categories-content"><?php wp_list_categories(); ?></div>
-
-	<?php 
-		//CREATE TAGS
-		$tags = get_tags();
-		$html = '<div>
-					<p>Tags</p>
-					<ul class="post_tags">';
-		foreach ( $tags as $tag ) {
-			$tag_link = get_tag_link( $tag->term_id );
-			$html .= "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
-		}
-		$html .= '</ul></div>';
-		echo $html;
-
+		<?php 
 		//CREATE NAVIGATION
-		if ( is_singular( 'attachment' ) ) {
-			// Parent post navigation.
+		if ( is_singular( 'post' ) ) {
 			the_post_navigation( array(
-				'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'mentoringtheme' ),
-			) );
-		} elseif ( is_singular( 'post' ) ) {
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'prev_text' => 
-					'<span class="post-title">&lt;&lt;%title</span>',
-				'next_text' => 
-					'<span class="post-title">%title&gt;&gt;</span>',
+				'prev_text' => '<span class="post-title">&lt;&lt; %title</span>',
+				'next_text' => '<span class="post-title">%title &gt;&gt;</span>',
 			) );
 		}
     endwhile;

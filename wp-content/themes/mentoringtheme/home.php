@@ -16,8 +16,8 @@
     <?php
     endwhile;
 		the_posts_pagination( array(
-		    'prev_text' => __( 'Previous', 'textdomain' ),
-		    'next_text' => __( 'Next', 'textdomain' ),
+		    'prev_text' => '<<',
+		    'next_text' => '>>',
 		) ); 
     wp_reset_query();
     ?>

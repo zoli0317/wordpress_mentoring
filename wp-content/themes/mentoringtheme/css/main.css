@@ -137,16 +137,46 @@ body {
 	padding: 16px;
 	transition: opacity 2.5s, background-color 2.5s;
 }
-
+/*SEARCH PAGE*/
+#sidebar {
+    display: none;
+}
+.entry-summary {
+    width: 1024px;
+}
+/*SEARCH PAGE END*/
+.sharebuttons {
+    text-align: center;
+}
+.sharebuttons a {
+    display: inline-block;
+    height: 26px;
+    width: 100px;    
+}
+.facebookshare {
+    background: url(../images/facebook_share.jpg) no-repeat;
+}
+.twittershare {
+    background: url(../images/twitter_share.jpg) no-repeat;
+}
+.entry-content {
+    width: 1024px;
+}
 .screen-reader-text {
 	display: none;
 }
 .nav-links {
+    font-weight: bold;
+    margin-top: 20px;
     text-align: center;
+}
+.nav-links a {
+    text-decoration: none;
 }
 .nav-previous,
 .nav-next {
-	display: inline-block;
+    display: inline-block;
+    margin: 0 5px 0 5px;
 }
 .nav-previous a,
 .nav-next a{
