@@ -39,9 +39,8 @@ function save_popup_details($post_id){
     }
 }
 
-// function get_popup_details(){
-
-$page_type = get_post_meta(get_the_ID(), 'page_type', true);
-echo $page_type;
-echo "maki";
-// }
+function get_popup_details(){
+	$page_type = get_post_meta(get_the_ID(), 'page_type', true);
+	echo $page_type;
+	echo "maki";
+}
