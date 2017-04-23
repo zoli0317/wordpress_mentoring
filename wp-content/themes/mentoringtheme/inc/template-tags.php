@@ -8,20 +8,40 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+if ( ! function_exists( 'twentysixteen_blog_details' ) ) :
+
+function twentysixteen_blog_details() {
+?>
+    <div class="post-contents">
+    	<a class="title-contents" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			<img class="thumbnail-image" src="<?php the_post_thumbnail_url('thumbnail'); ?>"/>
+		</a>
+		<?php the_excerpt(); ?>
+		<a href="<?php echo get_permalink(); ?>"> Read More...</a>
+		<?php twentysixteen_entry_meta(); ?>
+    </div>
+<?php
+}
+endif; 
+
 if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 
 function twentysixteen_entry_meta() {
 ?>
-<div class="author-content">Author: <span class="author"><?php the_author(); ?></span></div>
-<div class="date-content">Created date: <span class="date"><?php the_date(); ?></span></div>
+	<div class="meta-details">
+		<div class="author-content">Author: <span class="author"><?php the_author(); ?></span></div>
+		<div class="date-content">Created date: <span class="date"><?php the_date(); ?></span></div>
+		<?php
+			if ( 'post' === get_post_type() ) {
+				get_my_category();
+				get_my_tag();
+			}
+		?>
+	</div>
 <?php
-	if ( 'post' === get_post_type() ) {
-		get_my_category();
-		get_my_tag();
-	}
 }
-endif;
-
+endif; 
 
 if ( ! function_exists( 'get_my_category' ) ) :
 function get_my_category() {

@@ -7,16 +7,8 @@
 		<h2 class="title-content"><?php the_title(); ?></h2>
 		<img class="large-image" src="<?php the_post_thumbnail_url('large'); ?>"/>
         <div class="post-content"><?php the_content(); ?></div>
-		<div class="author-content">Author: <span class="author"><?php the_author(); ?></span></div>
-		<div class="date-content">Created date: <span class="date"><?php the_date(); ?></span></div>
-		<?php get_my_category(); ?>
-		<?php get_my_tag(); ?>
+		<?php twentysixteen_entry_meta(); ?>
 		
-	    <div class="sharebuttons">
-	    	<a href="http://facebook.com/sharer.php?u=<?php the_permalink(); ?>" title="Facebook share" class="facebookshare" target="_blank" rel="nofollow"></a>
-	    	<a href="http://twitter.com/home?status=Interesting article at <?php the_permalink(); ?>" title="Twitter share" class="twittershare" target="_blank" rel="nofollow"></a>
-	    </div>
-
 		<?php 
 		//CREATE NAVIGATION
 		if ( is_singular( 'post' ) ) {

@@ -31,3 +31,4 @@
 		<?php endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+<pre>This is the content-none.php</pre>

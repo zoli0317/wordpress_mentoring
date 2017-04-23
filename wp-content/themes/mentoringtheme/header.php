@@ -14,5 +14,6 @@
 				</div>
 				<div class="header-menus">
 					<?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'header-menu')); ?>    
+                    <div class="header-search"><?php get_search_form(); ?></div>
 				</div>
             </header>

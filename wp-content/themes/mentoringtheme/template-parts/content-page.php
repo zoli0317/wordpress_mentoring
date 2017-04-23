@@ -41,5 +41,5 @@
 			'</span></footer><!-- .entry-footer -->'
 		);
 	?>
-
 </article><!-- #post-## -->
+<pre>This is the content-page.php</pre>

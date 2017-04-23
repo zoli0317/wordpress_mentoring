@@ -51,3 +51,4 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+<pre>This is the content-single.php</pre>
