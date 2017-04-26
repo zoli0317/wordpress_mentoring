@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
 <div>
-	<?php get_sidebar('page'); ?>	
-	<div id="content" class="page-content">
+	<div id="content" class="page-content <?php echo get_background_color_details(); ?>">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php
 		while (have_posts()) : the_post(); ?> 

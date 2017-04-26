@@ -55,9 +55,25 @@ body {
 .page-content {
     box-sizing: border-box;
     display: inline-block;
-    padding-left: 15px;
+    padding: 0 15px;
+}
+.width-with-sidebar {
     width: 80%;
 }
+/*BACKGROUND COLOR SELECTOR*/
+.red {
+    background-color: #ff6464;
+}
+.green {
+    background-color: #79e079;
+}
+.blue {
+    background-color: #00a0ff;
+}
+.yellow {
+    background-color: #ffffb4;
+}
+/*BACKGROUND COLOR SELECTOR END*/
 .title-contents {
     display: inline-block;
     font-size: 26px;

@@ -1,46 +1,47 @@
 <?php
-add_action( 'add_meta_boxes', 'add_popup_box' );
+add_action( 'add_meta_boxes', 'add_background_color_box' );
 
-function add_popup_box( $post_type ){
+function add_background_color_box( $post_type ){
     add_meta_box(
         'popup_id',
-        'Page type selector',
-        'add_popup_details',
+        'Background color selector',
+        'add_background_color_details',
         'page',
         'side',
         'default'
     );
 }
 
-function add_popup_details($post){
+function add_background_color_details($post){
 	$post_id = $post->ID;
-	$page_type = get_post_meta( $post_id, 'page_type', true);
+	$background_color = get_post_meta( $post_id, 'background_color', true);
 	?>
-	<div>
-		<label class="page_type_labels" for="page_type">Page type:</label>
-		<select name="page_type">
-		  <option value="with_sidebar">With Sidebar</option>
-		  <option value="without_sidebar">Without Sidebar</option>
-		</select>
-	</div>
+  <div>
+    <label class="background_color_labels" for="background_color">Background color:</label>
+    <select name="background_color">
+      <option value="default" <?php if($background_color == 'red'){ echo 'selected'; } ?> >Default</option>
+      <option value="red" <?php if($background_color == 'red'){ echo 'selected'; } ?> >Red</option>
+      <option value="green" <?php if($background_color == 'green'){ echo 'selected'; } ?> >Green</option>
+      <option value="blue" <?php if($background_color == 'blue'){ echo 'selected'; } ?> >Blue</option>
+      <option value="yellow" <?php if($background_color == 'yellow'){ echo 'selected'; } ?> >Yellow</option>
+    </select>
+  </div>
 	<?php
 }
 
-add_action( 'save_post', 'save_popup_details' );
+add_action( 'save_post', 'save_background_color_details' );
 
-function save_popup_details($post_id){
-    $page_type = $_POST["page_type"];
+function save_background_color_details($post_id){
+    $background_color = $_POST["background_color"];
 
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return;
     }
-    if (isset($page_type) ) {
-	    update_post_meta($post_id, 'page_type', $page_type);
+    if (isset($background_color) ) {
+	    update_post_meta($post_id, 'background_color', $background_color);
     }
 }
 
-function get_popup_details(){
-	$page_type = get_post_meta(get_the_ID(), 'page_type', true);
-	echo $page_type;
-	echo "maki";
+function get_background_color_details(){
+	return get_post_meta(get_the_ID(), 'background_color', true);
 }
