@@ -4,10 +4,10 @@ body {
 	width: 90%;
 }
 .banner {
-	background-image: url(../images/banner.jpg);
     background-position: 30% 50%;
+    background-size: cover;
 	display: block;
-    height: 180px;
+    height: 200px;
 }
 /*HEADER MENU*/
 .header-menus {
@@ -23,7 +23,7 @@ body {
 	padding: 16px;
 	text-decoration: none;
 }
-.header-menus a:hover {
+.header-menus ul>li>a:hover {
 	background-color: #777;
 	padding: 16px;
 }
@@ -52,6 +52,26 @@ body {
     font-style: italic;
 }
 /*HEADER MENU END*/
+/* SOCIAL LINKS NEAR THE SEARCH */
+.social_link_facebook,
+.social_link_twitter {
+    background-repeat: no-repeat;
+    float: right;
+    margin-top: 12px;
+    padding-right: 0px !important;
+    width: 26px;
+}
+.social_link_facebook {
+    background-image: url(../images/facebook.jpg);
+}
+.social_link_twitter {
+    background-image: url(../images/twitter.jpg);
+}
+.social_link_facebook:hover,
+.social_link_twitter:hover {
+    border-color: #333 !important;
+}
+/* SOCIAL LINKS NEAR THE SEARCH END */
 .page-content {
     box-sizing: border-box;
     display: inline-block;
