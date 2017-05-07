@@ -1,4 +1,6 @@
 <?php
+add_filter( 'the_content', 'social_share_buttons');
+
 function social_share_buttons($content) {
 	global $post;
 	if(is_singular() || is_home()){

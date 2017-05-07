@@ -1,0 +1,17 @@
+h3 > span {
+	font-weight: normal;
+    font-size: 14px;
+}
+.social_label {
+    width: 60px;
+    display: inline-block;
+}
+.upload-custom-img,
+.delete-custom-img   {
+    border-radius: 6px;
+    background-color: #93dcd1;
+    color: #1b1e96;
+    font-weight: bold;
+    padding: 8px 12px;
+    text-decoration: none;
+}

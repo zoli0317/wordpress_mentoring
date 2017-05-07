@@ -1,5 +1,7 @@
 <?php
 
+add_action( 'admin_menu', 'register_my_custom_menu' );
+
 function register_my_custom_menu(){
     add_menu_page( 
         __( 'Custom Menu Title', 'textdomain' ),
@@ -14,6 +16,12 @@ function register_my_custom_menu(){
 
 function my_custom_menu(){
 	wp_enqueue_media();
+
+	//USE JS FOR THE IMAGE SELECTOR
+	wp_enqueue_script( 'select_image', get_template_directory_uri() . '/my-functions/admin-menu/select-image.js', array(), '', true );	
+	//USE CSS STYLE
+	wp_register_style('admin-style', get_template_directory_uri() . '/css/admin-style.css');
+	wp_enqueue_style('admin-style');
 
 	$my_settings = array(
 		'banner_image' => '', 
@@ -64,11 +72,9 @@ function my_custom_menu(){
 	<h2>Custom Theme Options:</h2>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . '?page=custompage');?>">  
 
-	  <!-- ***IMAGE SELECTOR***  -->
-	  <h3>Banner Selector:</h3>
+		<!-- ***IMAGE SELECTOR***  -->
+		<h3>Banner Selector:</h3>
 		<?php
-
-		wp_enqueue_script( 'select_image', get_template_directory_uri() . '/js/select_image.js', array(), '', true );	//USE JS FOR THE IMAGE SELECTOR
 
 		global $post;
 		$upload_link = esc_url( get_upload_iframe_src( 'image', $post->ID ) );	// Get WordPress' media upload URL
@@ -94,19 +100,19 @@ function my_custom_menu(){
 		</p>
 
 		<input class="custom-img-id" name="custom-img-id" type="hidden" value="<?php echo esc_attr( $your_img_id ); ?>" />		<!-- A hidden input to set and post the chosen image id -->
-		
+			
 		<!-- ***IMAGE SELECTOR END***  -->
 
-	  <h3>Social Share Buttons:</h3>
+	  <h3>Social Share Buttons: <span>(Under the content)</span></h3>
 		<input type="checkbox" name="social_share_facebook" <?php if (isset($social_share_facebook) && $social_share_facebook=="facebook") echo "checked";?> value="facebook">Facebook<br>
 		<input type="checkbox" name="social_share_twitter" <?php if (isset($social_share_twitter) && $social_share_twitter=="twitter") echo "checked";?> value="twitter">Twitter<br>
 		<input type="checkbox" name="social_share_google" <?php if (isset($social_share_google) && $social_share_google=="google") echo "checked";?> value="google">Google+<br>
 		<input type="checkbox" name="social_share_linkedIn" <?php if (isset($social_share_linkedIn) && $social_share_linkedIn=="linkedIn") echo "checked";?> value="linkedIn">LinkedIn<br>
 		<input type="checkbox" name="social_share_pinIt" <?php if (isset($social_share_pinIt) && $social_share_pinIt=="pinIt") echo "checked";?> value="pinIt">Pin It<br>
 	  
-	  <h3>Social Link Buttons:</h3>
+	  <h3>Social Link Buttons: <span>(Near the Search field)</span></h3>
 		<div>
-			<label>Facebook:</label>
+			<label class="social_label">Facebook:</label>
 			<input type="checkbox" 
 					class="social_link_checkbox_facebook"
 					name="social_link_checkbox_facebook"
@@ -116,7 +122,7 @@ function my_custom_menu(){
 			<input type="text" name="social_link_text_facebook" placeholder="Give me an url" value="<?php echo $social_link_text_facebook;?>" ></input>
 		</div>
 		<div>
-			<label>Twitter:</label>
+			<label class="social_label">Twitter:</label>
 			<input type="checkbox" 
 				   name="social_link_checkbox_twitter" 
 				   <?php if (isset($social_link_checkbox_twitter) && $social_link_checkbox_twitter=="twitter_link") echo "checked";?> 
