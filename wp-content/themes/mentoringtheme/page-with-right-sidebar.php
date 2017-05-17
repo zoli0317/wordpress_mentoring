@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-<div class="<?php echo get_background_color_details(); ?>">
+<div class="<?php echo get_background_color_details(); ?> clearfix">
 	<?php get_sidebar('page'); ?>	
 	<div id="content" class="page-content width-with-sidebar">
 		<h1 class="entry-title"><?php the_title(); ?></h1>

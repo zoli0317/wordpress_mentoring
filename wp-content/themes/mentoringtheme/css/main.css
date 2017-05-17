@@ -166,6 +166,11 @@ body {
     vertical-align: top;
     width: 19%;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .posts {
 	padding: 0 15px;
 }
