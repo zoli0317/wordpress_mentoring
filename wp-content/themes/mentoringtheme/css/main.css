@@ -94,6 +94,20 @@ body {
     background-color: #ffffb4;
 }
 /*BACKGROUND COLOR SELECTOR END*/
+/* MY WIDGET*/
+.my-widget-title {
+    color: #2341a1;
+    font-size: 20px;
+    text-align: center;
+}
+.my-widget-text {
+    color: #2341a1;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: justify;
+}
+/* MY WIDGET END*/
 .title-contents {
     display: inline-block;
     font-size: 26px;
@@ -148,7 +162,7 @@ body {
     display: inline-block;
 	float: right;
     font-weight: bold;
-    padding: 30px 10px 0 0;
+    padding: 30px 20px 0 0;
     vertical-align: top;
     width: 19%;
 }
@@ -190,6 +204,10 @@ body {
 }
 .author-content {
 	clear: both;
+}
+.shortcode_container,
+.shortcode_label {
+    text-align: center;
 }
 .footer-menus {
 	background-color: #f1f1f1;

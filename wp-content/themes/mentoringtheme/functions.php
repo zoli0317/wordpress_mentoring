@@ -39,3 +39,13 @@ require get_template_directory() . '/my-functions/admin-menu/admin-menu.php';
  * Add social share buttons (Under the content).
  */
 require get_template_directory() . '/my-functions/social-share-buttons/social-share-buttons.php';
+
+/**
+ * Add 'my_lorem_text' and 'my_random_picture' shortcodes.
+ */
+require get_template_directory() . '/my-functions/my-shortcodes/my-shortcodes.php';
+
+/**
+ * Add '+My Basic Widget+' widget.
+ */
+require get_template_directory() . '/my-functions/my-widget/my_basic_widget.php';
