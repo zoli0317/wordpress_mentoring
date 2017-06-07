@@ -1,0 +1,1 @@
+.accordion{list-style:none;padding:0 20px 0 0}.accordion .inner{display:none;list-style:none;overflow:hidden;padding-left:20px}.accordion li{margin:5px 0}.accordion li a.toggle{background-color:#333;border-radius:6px;color:#fefefe;display:block;padding:10px;text-decoration:none;width:100%}.accordion li a.toggle:hover{background:rgba(0,0,0,.9)}

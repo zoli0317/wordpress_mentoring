@@ -1,5 +1,15 @@
 <?php
 
+function styles_and_scripts() {
+    $desktop_stylesheet_uri = get_template_directory_uri() . "/desktop.css";
+    wp_enqueue_style( 'mentoring-desktop-style', $desktop_stylesheet_uri, '', hash_file( 'md5', $desktop_stylesheet_uri ) );
+
+    $script_uri = get_template_directory_uri() . '/script' . (WP_DEBUG ? '' : '') . '.js';
+    wp_enqueue_script( 'mentoring-script', $script_uri, array( 'jquery' ), hash_file( 'md5', $script_uri ), true );
+}
+
+add_action( 'wp_enqueue_scripts', 'styles_and_scripts' );
+
 /*******************************************
 		Register the Featured Images
 *******************************************/
